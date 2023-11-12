@@ -1,22 +1,21 @@
-Project: 0x11. C - printf | ALX Africa
+# Project: 0x11. C - printf | ALX Africa
 
 
-Prototype: int _printf(const char *format, ...);
+Prototype: `int _printf(const char *format, ...);`
 
-analysis
-we detect what we will do in files in order
-< Order > : in header main.h
-[ Order ] : separate file
+- require <stdarg.h>
 
-< 001 >  Variadic Function >  stdarg.h  للتعامل معها نحتاج تضمين 
+ **Assiat functions:**
+ 
+ -`_putchar` 
+	
+ - <unistd.h>
+  
+ -`_puts`
 
-Task 0:
-< 002 >  int _printf(const char *format, ...);
-the target function; it will be at the end to use all above
+ -`_strlen`
 
-so هنحتاج دوال مساعدة للطباعة
-_putchar  لطباعة الحروف المفردة
-_puts  لطباعة السلاسل النصية 
+## Task 0:
 
 
 
