@@ -9,9 +9,14 @@
  */
 int _puts(char *s)
 {
+	int l = 0;
+
 	while (*s)
 	{
 		_putchar(*s);
 		s++;
+		l++;
 	}
+
+	return(l);
 }
