@@ -3,9 +3,11 @@
 
 #include <stdarg.h>
 #include <unistd.h>
+#include <stdio.h>
 
 int _putchar(char c);
-
+int _puts(char *s);
+int _strlen(char *s);
 
 int _printf(const char *format, ...);
 

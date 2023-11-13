@@ -5,44 +5,48 @@
  *
  * Return: integer
  */
+#include "main.h"
+
+
 int _printf(const char *format, ...)
 {
+	int l = 0;
 	va_list args;
-
 	va_start(args, format);
-	int i;
 
 	if (!format)
 		return (-1);
 
-	for (i = 0, format[i] != '\0'; i++)
+	while (*format != '\0')
 	{
-		if (format[i] == '%')
+		if (*format == '%')
 		{
-			*format++;
+			format++;
+
 			switch (*format)
 			{
-			case '%':
-				_putchar('%');
-				break;
-			case 'c':
-				_putch(va_arg(args, int));
-				break;
-			case 's':
-				char *s = va_arg(args, *char);
-
-				while (*s)
-				{
-					_putchar(*s);
-					s++;
-				}
-				break;
-			default:
-				_putchar(*format);
+				case '%':
+					_putchar('%');
+					break;
+				case 'c':
+					_putchar(va_arg(args, int));
+					break;
+				case 's':
+					_puts(va_arg(args, char*));
+					break;
+				default:
+					_putchar(*format);
 			}
-
-			if (*format == '\0')
-				return (0);
 		}
+		else
+		{
+			_putchar(*format);
+		}
+
+		*format++;
 	}
+
+	va_end(args);
+
+	return (l);
 }
