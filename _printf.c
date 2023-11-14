@@ -21,15 +21,12 @@ int _printf(const char *format, ...)
 	{
 		if (*format == '%')
 		{
-			format++;
-			print_format(*format, args);
-			prints += print_format(*format, args);
+			prints += print_format(*++format, args);
 		} else
 		{
-			_putchar(*format);
-			prints++;
+			prints += _putchar(*format);
 		}
-		format++, prints++;
+		++format;
 	}
 	va_end(args);
 	return (prints);
