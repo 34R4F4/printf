@@ -22,24 +22,8 @@ int _printf(const char *format, ...)
 		if (*format == '%')
 		{
 			format++;
-			switch (*format)
-			{
-				case '%':
-					_putchar('%');
-					prints++;
-					break;
-				case 'c':
-					_putchar(va_arg(args, int));
-					prints++;
-					break;
-				case 's':
-					_puts(va_arg(args, char*));
-					prints += _strlen(va_arg(args, char*));
-					break;
-				default:
-					_putchar(*format);
-					prints++;
-			}
+			print_format(*format, args);
+			prints += print_format(*format, args);
 		} else
 		{
 			_putchar(*format);
