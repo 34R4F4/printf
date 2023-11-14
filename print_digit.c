@@ -2,7 +2,8 @@
 
 /**
  * print_digit - f
- * @p: 1
+ * @n: 1
+ * @base: 2
  * Return: n
  */
 int print_digit(long n, int base)
@@ -17,7 +18,7 @@ int print_digit(long n, int base)
 	}
 	else if (n < base)
 	{
-		return _putchar(digits[n]);
+		return (_putchar(digits[n]));
 	}
 	else
 	{
