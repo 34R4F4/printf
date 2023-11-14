@@ -22,7 +22,18 @@ int _printf(const char *format, ...)
 		if (*format == '%')
 		{
 			prints += print_format(*++format, args);
-		} else
+		}
+		else if (*format == 92)
+		{
+			++format;
+			if (*format == 'n')
+				_putchar(10);
+			else if (*format == 't')
+				_putchar(9);
+			else
+				prints += (_putchar(92) + _putchar(*format));
+		}
+	       	else
 		{
 			prints += _putchar(*format);
 		}
