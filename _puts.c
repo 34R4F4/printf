@@ -18,5 +18,5 @@ int _puts(char *s)
 		l++;
 	}
 
-	return(l);
+	return (l);
 }

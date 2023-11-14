@@ -10,12 +10,10 @@
 
 int _printf(const char *format, ...)
 {
-	int prints = 0
-	int l = 0;
+	int prints = 0;
 	va_list args;
 
 	va_start(args, format);
-
 	if (!format)
 		return (-1);
 
@@ -24,7 +22,6 @@ int _printf(const char *format, ...)
 		if (*format == '%')
 		{
 			format++;
-
 			switch (*format)
 			{
 				case '%':
@@ -43,18 +40,13 @@ int _printf(const char *format, ...)
 					_putchar(*format);
 					prints++;
 			}
-		}
-		else
+		} else
 		{
 			_putchar(*format);
 			prints++;
 		}
-
-		format++;
-		prints++;
+		format++, prints++;
 	}
-
 	va_end(args);
-
 	return (l);
 }
