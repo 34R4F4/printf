@@ -13,6 +13,18 @@ int _puts(char *s)
 
 	while (*s != '\0')
 	{
+		if (*s == '\')
+		{
+			_putchar('\');
+			s++;
+			l++;
+			if ((*s > 0 && *s < 32) || *s >= 127)
+			{
+				print_hex(*s, 16, 1);
+				s++;
+				l++;
+			}
+		}
 		_putchar(*s);
 		s++;
 		l++;

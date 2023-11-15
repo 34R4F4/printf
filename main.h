@@ -5,6 +5,8 @@
 #include <unistd.h>
 #include <stdio.h>
 
+#define BUFFER 1024
+
 int _putchar(char c);
 int _puts(char *s);
 int _strlen(char *s);
