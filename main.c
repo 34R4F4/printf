@@ -46,7 +46,9 @@ int main(void)
     printf("%%%\n");
     _printf("A\trafa\n");
     printf("A\trafa\n");
-    return (0);
     _printf(NULL);
     printf(NULL);
+    _printf("%b\n", 98);
+    printf("%b\n", 98);
+    return (0);
 }
