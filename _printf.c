@@ -33,7 +33,7 @@ int _printf(const char *format, ...)
 			else
 				prints += (_putchar(92) + _putchar(*format));
 		}
-	       	else
+		else
 		{
 			prints += _putchar(*format);
 		}
