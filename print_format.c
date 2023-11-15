@@ -25,8 +25,8 @@ int print_format(char specifier, va_list args)
 		count += print_digit((unsigned int) (va_arg(args, unsigned int)), 2);
 	else if (specifier == 'u')
 		count += print_digit((unsigned int) (va_arg(args, unsigned int)), 10);
-	else if (specifier == 'b')
-		count += print_digit((long) (va_arg(args, int)), 2);
+	else if (specifier == 'o')
+		count += print_digit((unsigned int) (va_arg(args, unsigned int)), 8);
 	else if (specifier == 'b')
 		count += print_digit((long) (va_arg(args, int)), 2);
 	else if (specifier == '%')
