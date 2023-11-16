@@ -11,6 +11,17 @@ int _puts(char *s)
 {
 	int l = 0;
 
+	if (!s)
+	{
+		char *e = "(null)";
+		while (*e)
+		{
+			_putchar(*e);
+			e++;
+		}
+		return (0);
+	}
+
 	while (*s != '\0')
 	{
 		if (*s == 92)
