@@ -27,7 +27,7 @@ int print_Str(char *s)
 	{
 			if ((*s > 0 && *s < 32) || *s >= 127)
 			{
-				_puts("\\X0");
+				_puts("\\x0");
 				print_hex(*s, 16, 1);
 				s++;
 				l++;
