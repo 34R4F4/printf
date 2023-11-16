@@ -14,6 +14,7 @@ int _puts(char *s)
 	if (!s)
 	{
 		char *e = "(null)";
+
 		while (*e)
 		{
 			_putchar(*e);
