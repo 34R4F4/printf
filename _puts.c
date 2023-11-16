@@ -13,9 +13,9 @@ int _puts(char *s)
 
 	while (*s != '\0')
 	{
-		if (*s == '\')
+		if (*s == 92)
 		{
-			_putchar('\');
+			_putchar(92);
 			s++;
 			l++;
 			if ((*s > 0 && *s < 32) || *s >= 127)
