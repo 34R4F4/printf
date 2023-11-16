@@ -20,6 +20,8 @@ int print_format(char specifier, va_list args)
 		count += _putchar(va_arg(args, int));
 	else if (specifier == 's')
 		count += _puts(va_arg(args, char *));
+	else if (specifier == 'S')
+		count += print_Str(va_arg(args, char *));
 	else if (specifier == 'i')
 		count += print_digit((long) (va_arg(args, int)), 10);
 	else if (specifier == 'd')

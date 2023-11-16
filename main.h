@@ -13,6 +13,7 @@ int _strlen(char *s);
 int print_format(char specifier, va_list args);
 int print_digit(long n, int base);
 int print_hex(long n, int base, int s);
+int print_Str(char *s);
 
 int _printf(const char *format, ...);
 
