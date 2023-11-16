@@ -120,6 +120,26 @@ int main(void)
 	l2 = printf("%S\n", "Best\nSchool");
 	printf("%d\t%d\n", l1, l2);
         _printf("%d\t%d\n", l1, l2);
+	printf("\n--------\n");
+	l1 = _printf("%S", "No special character.");
+	printf("%d", l1);
+	printf("\n--------\n");
+	l1 = _printf("%S", "\n");
+	printf("%d", l1);
+	printf("\n--------\n");
+	l1 = _printf("%S", "\x01\x02\x03\x04\x05\x06\x07");
+	printf("%d", l1);
+	printf("\n--------\n");
+	l1 = _printf("Could you print some non-prntable characters?\n%S\nThanks!\n", "Sure:\x1F\x7F\n");
+	printf("%d", l1);
+	printf("\n--------\n");
+	l1 = _printf("");
+	printf("%d", l1);
+	printf("\n--------\n");
+	l1 = _printf("- What did you say?\n- %S\n- That's what I thought.\n", "#");
+        printf("%d", l1);
+	printf("\n--------\n");
+	
 
     return (0);
 }
