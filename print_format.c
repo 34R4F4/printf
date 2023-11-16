@@ -13,6 +13,9 @@ int print_format(char specifier, va_list args)
 {
 	int count = 0;
 
+	if (!specifier)
+		return (0);
+
 	if (specifier == 'c')
 		count += _putchar(va_arg(args, int));
 	else if (specifier == 's')
@@ -34,7 +37,10 @@ int print_format(char specifier, va_list args)
 	else if (specifier == '%')
 		count += (_putchar('%'));
 	else
-		count += (_putchar('%') + _putchar(specifier));
+		if (specifier)
+			count += (_putchar('%') + _putchar(specifier));
+		else
+			count += (_putchar('%'));
 
 	return (count);
 }
