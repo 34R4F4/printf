@@ -11,34 +11,34 @@ int print_Str(char *s)
 {
 	int l = 0;
 
-	if (!s)
-	{
-		char *e = "(null)";
+if (!s)
+{
+	char *e = "(null)";
 
-		while (*e)
-		{
-			_putchar(*e);
-			e++;
-		}
-		return (0);
+	while (*e)
+	{
+		_putchar(*e);
+		e++;
 	}
+	return (0);
+}
 
-	while (*s != '\0')
+while (*s != '\0')
+{
+	if ((*s > 0 && *s < 32) || *s >= 127)
 	{
-			if ((*s > 0 && *s < 32) || *s >= 127)
-			{
-				_puts("\\x");
-				if (*s < 16)
-					_putchar('0');
+		_puts("\\x");
+		if (*s < 16)
+			_putchar('0');
 
-				print_hex(*s, 16, 1);
-				s++;
-				l++;
-			}
-		_putchar(*s);
+		print_hex(*s, 16, 1);
 		s++;
 		l++;
 	}
+	_putchar(*s);
+	s++;
+	l++;
+}
 
 	return (l);
 }
