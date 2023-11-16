@@ -9,6 +9,7 @@
  */
 int main(void)
 {
+	int l1, l2;
     int len;
     int len2;
     unsigned int ui;
@@ -115,6 +116,10 @@ int main(void)
 	printf("%c", 'S');
 	_printf("Let's print a simple sentence.\n");
 	printf("Let's print a simple sentence.\n");
+	l1 = _printf("%S\n", "Best\nSchool");
+	l2 = printf("%S\n", "Best\nSchool");
+	printf("%d\t%d\n", l1, l2);
+        _printf("%d\t%d\n", l1, l2);
 
     return (0);
 }
