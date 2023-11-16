@@ -62,6 +62,8 @@ int main(void)
 	printf("%c", '\0');
 	_printf(NULL);
 	printf(NULL);
+	_printf('\n');
+	printf('\n');
 	_printf("man gcc:\n%s", str);
 	printf("man gcc:\n%s", str);
 	_printf(str);
