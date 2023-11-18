@@ -29,16 +29,15 @@ while (*s != '\0')
 	if ((*s > 0 && *s < 32) || *s >= 127)
 	{
 		_puts("\\x");
-		if (*s <= 16)
+		l += 2;
+		if (*s < 16)
+		{
 			_putchar('0');
+			l++;
+		}
 
 		print_hex(*s, 16, 1);
-		s++;
-		l++;
 	}
-	_putchar(*s);
-	s++;
-	l++;
 }
 
 	return (l);
