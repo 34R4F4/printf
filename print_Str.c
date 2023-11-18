@@ -10,6 +10,7 @@
 int print_Str(char *s)
 {
 	int l = 0;
+	int i;
 
 if (!s)
 {
@@ -24,19 +25,24 @@ if (!s)
 	return (l);
 }
 
-while (*s != '\0')
+for (i = 0; s[i] != '\0'; i++)
 {
-	if ((*s > 0 && *s < 32) || *s >= 127)
+	if ((s[i] > 0 && s[i] < 32) || s[i] >= 127)
 	{
 		_puts("\\x");
 		l += 2;
-		if (*s < 16)
+		if (s[i] < 16)
 		{
 			_putchar('0');
 			l++;
 		}
 
-		l += print_hex(*s, 16, 1);
+		l += print_hex(s[i], 16, 1);
+	}
+	else
+	{
+		_putchar(s[i]);
+		l++;
 	}
 }
 
