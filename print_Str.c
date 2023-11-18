@@ -36,7 +36,7 @@ while (*s != '\0')
 			l++;
 		}
 
-		print_hex(*s, 16, 1);
+		l += print_hex(*s, 16, 1);
 	}
 }
 
