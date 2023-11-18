@@ -29,6 +29,7 @@ int print_format(char specifier, va_list args)
 	else if (specifier == 'p')
 	{
 		void *ptr = va_arg(args, void *);
+
 		print_Ptr((unsigned long) ptr);
 	}
 	else if (specifier == 'b')
