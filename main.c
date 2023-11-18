@@ -66,7 +66,7 @@ int main(void)
 	printf("\n%d\t%d\n", len, len2);
 	len = _printf("%c", '\0');
 	len2 = _printf("%c", '\0');
-	printf("\n%d\t%d\n", len, len2);
+	_printf("\n%d\t%d\n", len, len2);
 	printf("\n%d\t%d\n", len, len2);
 	_printf(NULL);
 	printf(NULL);
