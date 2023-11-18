@@ -19,8 +19,9 @@ if (!s)
 	{
 		_putchar(*e);
 		e++;
+		l++;
 	}
-	return (0);
+	return (l);
 }
 
 while (*s != '\0')
