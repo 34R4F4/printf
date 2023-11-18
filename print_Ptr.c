@@ -14,5 +14,4 @@ void print_Ptr(unsigned long ptr)
 
 	_puts("0x");
 	print_hex(ptr, 16, 0);
-	return;
 }
